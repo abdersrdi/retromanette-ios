@@ -9,17 +9,17 @@
 "discover.search" = "Search games";
 "discover.noResults" = "No games found.";
 "discover.loadError" = "Could not load the games. Check your internet connection.";
-"discover.nes" = "NES games are coming in a future update.";
+"discover.nes" = "More retro systems are coming in a future update.";
 
 "common.retry" = "Try again";
 "common.ok" = "OK";
 "common.delete" = "Delete";
 "common.done" = "Done";
 
-"system.gb" = "Game Boy";
-"system.gbc" = "Game Boy Color";
-"system.gba" = "Game Boy Advance";
-"system.nes" = "NES";
+"system.gb" = "GB";
+"system.gbc" = "GBC";
+"system.gba" = "GBA";
+"system.nes" = "8-bit";
 
 "genre.puzzle" = "Puzzle";
 "genre.platformer" = "Platformer";
@@ -89,18 +89,18 @@
 "settings.premium" = "Premium";
 "settings.premium.soon" = "Coming soon";
 "settings.premium.noAds" = "No ads";
-"settings.premium.cloud" = "9 cloud save slots per game";
-"settings.premium.online" = "Online play with family and friends";
+"settings.premium.cloud" = "9 save slots per game";
+"settings.premium.online" = "Online play on retromanette.com";
 "settings.premium.body" = "Premium will unlock inside the app in a future update, with the same account as retromanette.com.";
 
 "licenses.note" = "The app uses the mGBA emulator, licensed under MPL-2.0. Its source code is available at the links above.";
 
 "premium.title" = "Retro Manette Premium";
-"premium.subtitle" = "No ads, plus extras on retromanette.com.";
-"premium.feature.cloud" = "9 cloud save slots per game";
-"premium.feature.cloud.detail" = "On retromanette.com, your saves follow you to every device.";
-"premium.feature.online" = "Online play with family and friends";
-"premium.feature.online.detail" = "On retromanette.com, play together by private invitation, with people you know.";
+"premium.subtitle" = "No ads and 9 save slots, plus extras on retromanette.com.";
+"premium.feature.cloud" = "Cloud saves on retromanette.com";
+"premium.feature.cloud.detail" = "Your saves follow you to every device, 9 slots per game.";
+"premium.feature.online" = "Online play on retromanette.com";
+"premium.feature.online.detail" = "Play together by private invitation, with people you know.";
 "premium.feature.noads" = "No ads";
 "premium.feature.noads.detail" = "Never an ad, in the app or on retromanette.com.";
 "premium.plan.name" = "Monthly plan";
@@ -148,3 +148,7 @@
 "account.error.code" = "That code is not right or has expired.";
 "account.error.tooMany" = "Too many tries. Please wait a few minutes.";
 "account.error.email" = "Please enter a valid email address.";
+"premium.feature.slots" = "9 save slots per game";
+"premium.feature.slots.detail" = "Free: 3 slots. Premium: save and load in nine places in every game.";
+"player.slot.locked.title" = "Premium slot";
+"player.slot.locked.message" = "Save slots 4 to 9 are part of Premium. You can still use slots 1 to 3, and load any save you already have.";

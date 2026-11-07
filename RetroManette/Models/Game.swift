@@ -9,7 +9,7 @@ enum Site {
 enum GameSystem: String, Codable {
     case gb, gbc, gba, nes
 
-    /// mGBA (MPL-2.0) plays Game Boy, Game Boy Color and Game Boy Advance. NES needs another core and comes later.
+    /// mGBA (MPL-2.0) plays the GB, GBC and GBA formats. NES needs another core and comes later.
     var isPlayable: Bool { self != .nes }
     var titleKey: String {
         switch self {

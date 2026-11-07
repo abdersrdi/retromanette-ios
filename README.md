@@ -5,7 +5,7 @@ emulator running on the device. Written in SwiftUI with a small C frontend aroun
 wrapper: there is no web view anywhere.
 
 - **Languages:** English, Arabic (right to left) and French
-- **Play:** Game Boy, Game Boy Color and Game Boy Advance through mGBA (MPL-2.0). NES comes later with a permissive core.
+- **Play:** handheld-style games in the GB, GBC and GBA formats through mGBA (MPL-2.0). More systems come later with permissive cores.
 - **Controls:** glass touch controls with haptics, wireless controllers, save states (9 slots), automatic resume
 - **Catalog:** the same list as the website (`games.json`), with a copy inside the app for offline first launch
 - **Library:** add your own `.gb`, `.gbc`, `.gba` files from Files. They stay on the device and are never uploaded.

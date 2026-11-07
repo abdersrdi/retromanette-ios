@@ -9,17 +9,17 @@
 "discover.search" = "ابحث عن لعبة";
 "discover.noResults" = "لا توجد ألعاب مطابقة.";
 "discover.loadError" = "تعذّر تحميل الألعاب. تحقّق من اتصالك بالإنترنت.";
-"discover.nes" = "ألعاب NES قادمة في تحديث قادم.";
+"discover.nes" = "المزيد من أنظمة الألعاب الكلاسيكية قادم في تحديث لاحق.";
 
 "common.retry" = "أعد المحاولة";
 "common.ok" = "حسناً";
 "common.delete" = "حذف";
 "common.done" = "تم";
 
-"system.gb" = "Game Boy";
-"system.gbc" = "Game Boy Color";
-"system.gba" = "Game Boy Advance";
-"system.nes" = "NES";
+"system.gb" = "GB";
+"system.gbc" = "GBC";
+"system.gba" = "GBA";
+"system.nes" = "8-bit";
 
 "genre.puzzle" = "ألغاز";
 "genre.platformer" = "منصّات";
@@ -89,18 +89,18 @@
 "settings.premium" = "Premium";
 "settings.premium.soon" = "قريباً";
 "settings.premium.noAds" = "بلا إعلانات";
-"settings.premium.cloud" = "9 خانات حفظ سحابي لكل لعبة";
-"settings.premium.online" = "اللعب عبر الإنترنت مع العائلة والأصدقاء";
+"settings.premium.cloud" = "9 خانات حفظ لكل لعبة";
+"settings.premium.online" = "اللعب عبر الإنترنت على retromanette.com";
 "settings.premium.body" = "سيُفتح Premium داخل التطبيق في تحديث قادم، بنفس الحساب المستخدم في retromanette.com.";
 
 "licenses.note" = "يستخدم التطبيق المحاكي mGBA المرخّص بـ MPL-2.0، وشيفرته المصدرية متاحة عبر الروابط أعلاه.";
 
 "premium.title" = "Retro Manette Premium";
-"premium.subtitle" = "بلا إعلانات، مع ميزات إضافية على retromanette.com.";
-"premium.feature.cloud" = "9 خانات حفظ سحابي لكل لعبة";
-"premium.feature.cloud.detail" = "على retromanette.com تنتقل حالات الحفظ معك إلى كل أجهزتك.";
-"premium.feature.online" = "اللعب عبر الإنترنت مع العائلة والأصدقاء";
-"premium.feature.online.detail" = "على retromanette.com العب معاً بدعوة خاصة مع أشخاص تعرفهم.";
+"premium.subtitle" = "بلا إعلانات و9 خانات حفظ، مع ميزات إضافية على retromanette.com.";
+"premium.feature.cloud" = "حفظ سحابي على retromanette.com";
+"premium.feature.cloud.detail" = "تنتقل حالات الحفظ معك إلى كل أجهزتك، 9 خانات لكل لعبة.";
+"premium.feature.online" = "اللعب عبر الإنترنت على retromanette.com";
+"premium.feature.online.detail" = "العب معاً بدعوة خاصة مع أشخاص تعرفهم.";
 "premium.feature.noads" = "بلا إعلانات";
 "premium.feature.noads.detail" = "لا إعلانات أبداً، في التطبيق وعلى retromanette.com.";
 "premium.plan.name" = "الاشتراك الشهري";
@@ -148,3 +148,7 @@
 "account.error.code" = "الرمز غير صحيح أو انتهت صلاحيته.";
 "account.error.tooMany" = "محاولات كثيرة. انتظر بضع دقائق.";
 "account.error.email" = "يرجى إدخال بريد إلكتروني صالح.";
+"premium.feature.slots" = "9 خانات حفظ لكل لعبة";
+"premium.feature.slots.detail" = "مجاناً: 3 خانات. مع Premium: احفظ وحمّل في تسعة أماكن في كل لعبة.";
+"player.slot.locked.title" = "خانة Premium";
+"player.slot.locked.message" = "خانات الحفظ من 4 إلى 9 ضمن Premium. يمكنك استخدام الخانات 1 إلى 3، وتحميل أي حفظ لديك.";

@@ -17,6 +17,7 @@ struct PremiumView: View {
                     header
                     VStack(spacing: 14) {
                         feature("nosign", "premium.feature.noads", "premium.feature.noads.detail")
+                        feature("square.and.arrow.down.on.square.fill", "premium.feature.slots", "premium.feature.slots.detail")
                         Text("premium.bonus.title")
                             .font(.system(size: 13, weight: .bold))
                             .textCase(.uppercase)

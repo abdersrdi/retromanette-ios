@@ -9,17 +9,17 @@
 "discover.search" = "Rechercher un jeu";
 "discover.noResults" = "Aucun jeu trouvé.";
 "discover.loadError" = "Impossible de charger les jeux. Vérifiez votre connexion Internet.";
-"discover.nes" = "Les jeux NES arriveront dans une prochaine mise à jour.";
+"discover.nes" = "D'autres systèmes rétro arriveront dans une prochaine mise à jour.";
 
 "common.retry" = "Réessayer";
 "common.ok" = "OK";
 "common.delete" = "Supprimer";
 "common.done" = "Terminé";
 
-"system.gb" = "Game Boy";
-"system.gbc" = "Game Boy Color";
-"system.gba" = "Game Boy Advance";
-"system.nes" = "NES";
+"system.gb" = "GB";
+"system.gbc" = "GBC";
+"system.gba" = "GBA";
+"system.nes" = "8-bit";
 
 "genre.puzzle" = "Puzzle";
 "genre.platformer" = "Plateforme";
@@ -89,18 +89,18 @@
 "settings.premium" = "Premium";
 "settings.premium.soon" = "Bientôt";
 "settings.premium.noAds" = "Sans publicité";
-"settings.premium.cloud" = "9 emplacements de sauvegarde cloud par jeu";
-"settings.premium.online" = "Jeu en ligne avec famille et amis";
+"settings.premium.cloud" = "9 emplacements de sauvegarde par jeu";
+"settings.premium.online" = "Jeu en ligne sur retromanette.com";
 "settings.premium.body" = "Premium se débloquera dans l'app lors d'une prochaine mise à jour, avec le même compte que retromanette.com.";
 
 "licenses.note" = "L'app utilise l'émulateur mGBA, sous licence MPL-2.0. Son code source est disponible via les liens ci-dessus.";
 
 "premium.title" = "Retro Manette Premium";
-"premium.subtitle" = "Sans publicité, avec des extras sur retromanette.com.";
-"premium.feature.cloud" = "9 emplacements de sauvegarde cloud par jeu";
-"premium.feature.cloud.detail" = "Sur retromanette.com, vos sauvegardes vous suivent sur tous vos appareils.";
-"premium.feature.online" = "Jeu en ligne avec famille et amis";
-"premium.feature.online.detail" = "Sur retromanette.com, jouez ensemble sur invitation privée, avec des personnes que vous connaissez.";
+"premium.subtitle" = "Sans publicité et 9 emplacements de sauvegarde, avec des extras sur retromanette.com.";
+"premium.feature.cloud" = "Sauvegarde cloud sur retromanette.com";
+"premium.feature.cloud.detail" = "Vos sauvegardes vous suivent sur tous vos appareils, 9 emplacements par jeu.";
+"premium.feature.online" = "Jeu en ligne sur retromanette.com";
+"premium.feature.online.detail" = "Jouez ensemble sur invitation privée, avec des personnes que vous connaissez.";
 "premium.feature.noads" = "Sans publicité";
 "premium.feature.noads.detail" = "Jamais de publicité, dans l'app comme sur retromanette.com.";
 "premium.plan.name" = "Abonnement mensuel";
@@ -148,3 +148,7 @@
 "account.error.code" = "Ce code est incorrect ou a expiré.";
 "account.error.tooMany" = "Trop d'essais. Patientez quelques minutes.";
 "account.error.email" = "Veuillez saisir une adresse e-mail valide.";
+"premium.feature.slots" = "9 emplacements de sauvegarde par jeu";
+"premium.feature.slots.detail" = "Gratuit : 3 emplacements. Premium : sauvegardez et chargez à neuf endroits dans chaque jeu.";
+"player.slot.locked.title" = "Emplacement Premium";
+"player.slot.locked.message" = "Les emplacements 4 à 9 font partie de Premium. Vous pouvez utiliser les emplacements 1 à 3 et charger toute sauvegarde existante.";

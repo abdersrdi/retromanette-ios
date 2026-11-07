@@ -275,6 +275,13 @@ final class EmulatorSession: ObservableObject {
         } catch {
             self.engine = nil
         }
+        // after a phone call, an alarm or Siri the sound has to be started again
+        controllerObservers.append(NotificationCenter.default.addObserver(forName: AVAudioSession.interruptionNotification, object: nil, queue: .main) { [weak self] note in
+            guard let self, let raw = note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt,
+                  AVAudioSession.InterruptionType(rawValue: raw) == .ended else { return }
+            try? AVAudioSession.sharedInstance().setActive(true)
+            if !self.pauseFlag.get() { try? self.engine?.start() }
+        })
     }
 
     // MARK: - Save states

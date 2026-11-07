@@ -34,6 +34,7 @@ struct PlayerView: View {
     let request: PlayRequest
     @StateObject private var session: EmulatorSession
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.scenePhase) private var scenePhase
     @AppStorage("controlsOpacity") private var controlsOpacity = 0.95
     @AppStorage("smoothScaling") private var smoothScaling = false
     @AppStorage("autoResume") private var autoResume = true
@@ -89,6 +90,9 @@ struct PlayerView: View {
         .onChange(of: smoothScaling) { session.setSmoothScaling($0) }
         .onChange(of: showMenu) { session.pause($0 || slotsMode != nil) }
         .onChange(of: slotsMode) { session.pause($0 != nil || showMenu) }
+        .onChange(of: scenePhase) { phase in
+            if phase == .active { session.pause(showMenu || slotsMode != nil) } else { session.releaseAll(); session.pause(true) }
+        }
         .sheet(isPresented: $showMenu) { menuSheet }
         .sheet(item: $slotsMode) { mode in
             SlotsSheet(session: session, mode: mode) { message in
@@ -247,6 +251,11 @@ struct SlotsSheet: View {
     let mode: Mode
     let done: (LocalizedStringKey?) -> Void
     @State private var slots: [EmulatorSession.SlotInfo] = []
+    @State private var lockedAlert = false
+    @EnvironmentObject private var premium: PremiumStore
+
+    /// Free: 3 save slots. Premium: 9. Loading an existing save is never locked.
+    private func isLocked(_ slot: EmulatorSession.SlotInfo) -> Bool { mode == .save && slot.slot > 3 && !premium.isPremium }
 
     var body: some View {
         NavigationStack {
@@ -265,6 +274,7 @@ struct SlotsSheet: View {
             .navigationTitle(LocalizedStringKey(mode == .save ? "player.save" : "player.load"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("common.done") { done(nil) } } }
+            .alert("player.slot.locked.title", isPresented: $lockedAlert) { Button("common.ok", role: .cancel) {} } message: { Text("player.slot.locked.message") }
         }
         .presentationDetents([.large])
         .preferredColorScheme(.dark)
@@ -290,9 +300,17 @@ struct SlotsSheet: View {
         }
         .padding(10)
         .glassCard()
+        .overlay(alignment: .topTrailing) {
+            if isLocked(slot) {
+                Image(systemName: "lock.fill").font(.system(size: 12, weight: .bold)).foregroundStyle(Theme.accentInk)
+                    .padding(7).background(Circle().fill(Theme.accent)).padding(8)
+            }
+        }
+        .opacity(isLocked(slot) ? 0.7 : 1)
     }
 
     private func choose(_ slot: EmulatorSession.SlotInfo) {
+        if isLocked(slot) { lockedAlert = true; return }
         switch mode {
         case .save:
             session.saveState(slot: slot.slot) { ok in done(ok ? "player.saved" : "player.failed") }
