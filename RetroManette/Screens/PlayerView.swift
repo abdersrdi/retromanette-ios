@@ -52,7 +52,9 @@ struct PlayerView: View {
             let landscape = geo.size.width > geo.size.height
             ZStack {
                 Color.black.ignoresSafeArea()
-                if landscape { landscapeLayout(geo) } else { portraitLayout(geo) }
+                // the game controls keep their place in every language: a D-pad on the left and A and B on the right
+                Group { if landscape { landscapeLayout(geo) } else { portraitLayout(geo) } }
+                    .environment(\.layoutDirection, .leftToRight)
 
                 if case .failed(let message) = session.phase {
                     failure(message)
