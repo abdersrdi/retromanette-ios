@@ -96,11 +96,11 @@
 "licenses.note" = "يستخدم التطبيق المحاكي mGBA المرخّص بـ MPL-2.0، وشيفرته المصدرية متاحة عبر الروابط أعلاه.";
 
 "premium.title" = "Retro Manette Premium";
-"premium.subtitle" = "حفظ أكثر، لعب مشترك، بلا إعلانات.";
+"premium.subtitle" = "بلا إعلانات، مع ميزات إضافية على retromanette.com.";
 "premium.feature.cloud" = "9 خانات حفظ سحابي لكل لعبة";
-"premium.feature.cloud.detail" = "تنتقل حالات الحفظ معك إلى كل أجهزتك.";
+"premium.feature.cloud.detail" = "على retromanette.com تنتقل حالات الحفظ معك إلى كل أجهزتك.";
 "premium.feature.online" = "اللعب عبر الإنترنت مع العائلة والأصدقاء";
-"premium.feature.online.detail" = "العب معاً بدعوة خاصة مع أشخاص تعرفهم.";
+"premium.feature.online.detail" = "على retromanette.com العب معاً بدعوة خاصة مع أشخاص تعرفهم.";
 "premium.feature.noads" = "بلا إعلانات";
 "premium.feature.noads.detail" = "لا إعلانات أبداً، في التطبيق وعلى retromanette.com.";
 "premium.plan.name" = "الاشتراك الشهري";
@@ -124,3 +124,27 @@
 "settings.ads.note" = "Retro Manette مجاني بالإعلانات. يزيلها Premium نهائياً.";
 "premium.devices.title" = "اشترك هنا واستخدمه في كل مكان";
 "premium.devices.detail" = "يُباع Premium عبر تطبيق iOS هذا فقط. بعد الاشتراك سجّل الدخول بنفس البريد الإلكتروني على retromanette.com لاستخدام Premium على حاسوبك وماك والتلفاز.";
+
+"premium.bonus.title" = "إضافات على retromanette.com";
+"common.cancel" = "إلغاء";
+"account.title" = "الحساب";
+"account.signin" = "تسجيل الدخول";
+"account.signout" = "تسجيل الخروج";
+"account.delete" = "حذف الحساب";
+"account.delete.title" = "حذف حسابك؟";
+"account.delete.message" = "يُحذف بريدك الإلكتروني وملفات الحفظ السحابية نهائياً. لا تتأثر ألعابك وملفات الحفظ على هذا الجهاز. تُدار الاشتراكات من Apple.";
+"account.intro" = "سجّل الدخول بالبريد الذي تستخدمه على retromanette.com. حساب واحد للتطبيق والموقع، فيعمل Premium على حاسوبك وماك والتلفاز.";
+"account.email" = "البريد الإلكتروني";
+"account.code" = "الرمز";
+"account.sendCode" = "إرسال الرمز";
+"account.codeSent" = "أرسلنا رمزاً إلى %@. أدخله أدناه.";
+"account.verify" = "تسجيل الدخول";
+"account.other" = "استخدام بريد آخر";
+"account.signedInAs" = "مسجّل الدخول باسم";
+"account.signedIn.note" = "يعمل هذا الحساب أيضاً على retromanette.com، على حاسوبك وماك والتلفاز.";
+"account.optional" = "تسجيل الدخول اختياري. يعمل التطبيق بالكامل بدون حساب.";
+"account.footer" = "اختياري. استخدم نفس الحساب على retromanette.com.";
+"account.error.network" = "تعذّر الوصول إلى الخادم. تحقّق من اتصالك وحاول مجدداً.";
+"account.error.code" = "الرمز غير صحيح أو انتهت صلاحيته.";
+"account.error.tooMany" = "محاولات كثيرة. انتظر بضع دقائق.";
+"account.error.email" = "يرجى إدخال بريد إلكتروني صالح.";

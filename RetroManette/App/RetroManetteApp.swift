@@ -15,6 +15,7 @@ struct RetroManetteApp: App {
     @StateObject private var recents = RecentStore()
     @StateObject private var router = Router()
     @StateObject private var premium = PremiumStore()
+    @StateObject private var account = AccountStore()
 
     init() {
         // covers are cached on disk so the home screen is instant the second time
@@ -35,6 +36,8 @@ struct RetroManetteApp: App {
                 .environmentObject(recents)
                 .environmentObject(router)
                 .environmentObject(premium)
+                .environmentObject(account)
+                .task { await account.restore() }
                 .task { await premium.start() }
                 .task { await AdsManager.shared.start() }
                 .preferredColorScheme(.dark)

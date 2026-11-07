@@ -96,13 +96,13 @@
 "licenses.note" = "The app uses the mGBA emulator, licensed under MPL-2.0. Its source code is available at the links above.";
 
 "premium.title" = "Retro Manette Premium";
-"premium.subtitle" = "More saves, play together, no ads.";
+"premium.subtitle" = "No ads, plus extras on retromanette.com.";
 "premium.feature.cloud" = "9 cloud save slots per game";
-"premium.feature.cloud.detail" = "Your save states follow you to every device.";
+"premium.feature.cloud.detail" = "On retromanette.com, your saves follow you to every device.";
 "premium.feature.online" = "Online play with family and friends";
-"premium.feature.online.detail" = "Play together by private invitation, with people you know.";
+"premium.feature.online.detail" = "On retromanette.com, play together by private invitation, with people you know.";
 "premium.feature.noads" = "No ads";
-"premium.feature.noads.detail" = "Never an ad, on the app or on retromanette.com.";
+"premium.feature.noads.detail" = "Never an ad, in the app or on retromanette.com.";
 "premium.plan.name" = "Monthly plan";
 "premium.price.month" = "%@ / month";
 "premium.unavailable" = "Premium is not available to buy yet.";
@@ -124,3 +124,27 @@
 "settings.ads.note" = "Retro Manette is free with ads. Premium removes them for good.";
 "premium.devices.title" = "Subscribe here, use it everywhere";
 "premium.devices.detail" = "Premium is sold only through this iOS app. After subscribing, sign in with the same email on retromanette.com to use Premium on your PC, Mac and TV.";
+
+"premium.bonus.title" = "Bonus on retromanette.com";
+"common.cancel" = "Cancel";
+"account.title" = "Account";
+"account.signin" = "Sign in";
+"account.signout" = "Sign out";
+"account.delete" = "Delete account";
+"account.delete.title" = "Delete your account?";
+"account.delete.message" = "Your email address and cloud saves are removed for good. Your games and saves on this device are not affected. Subscriptions are managed by Apple.";
+"account.intro" = "Sign in with the email you use on retromanette.com. One account for the app and the website, so Premium works on your PC, Mac and TV.";
+"account.email" = "Email";
+"account.code" = "Code";
+"account.sendCode" = "Send code";
+"account.codeSent" = "We sent a code to %@. Enter it below.";
+"account.verify" = "Sign in";
+"account.other" = "Use another email";
+"account.signedInAs" = "Signed in as";
+"account.signedIn.note" = "This account also works on retromanette.com, on your PC, Mac and TV.";
+"account.optional" = "Signing in is optional. The app works fully without an account.";
+"account.footer" = "Optional. Use the same account on retromanette.com.";
+"account.error.network" = "Could not reach the server. Check your connection and try again.";
+"account.error.code" = "That code is not right or has expired.";
+"account.error.tooMany" = "Too many tries. Please wait a few minutes.";
+"account.error.email" = "Please enter a valid email address.";

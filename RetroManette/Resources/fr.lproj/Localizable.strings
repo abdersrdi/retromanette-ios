@@ -96,11 +96,11 @@
 "licenses.note" = "L'app utilise l'émulateur mGBA, sous licence MPL-2.0. Son code source est disponible via les liens ci-dessus.";
 
 "premium.title" = "Retro Manette Premium";
-"premium.subtitle" = "Plus de sauvegardes, jouer ensemble, sans publicité.";
+"premium.subtitle" = "Sans publicité, avec des extras sur retromanette.com.";
 "premium.feature.cloud" = "9 emplacements de sauvegarde cloud par jeu";
-"premium.feature.cloud.detail" = "Vos sauvegardes vous suivent sur tous vos appareils.";
+"premium.feature.cloud.detail" = "Sur retromanette.com, vos sauvegardes vous suivent sur tous vos appareils.";
 "premium.feature.online" = "Jeu en ligne avec famille et amis";
-"premium.feature.online.detail" = "Jouez ensemble sur invitation privée, avec des personnes que vous connaissez.";
+"premium.feature.online.detail" = "Sur retromanette.com, jouez ensemble sur invitation privée, avec des personnes que vous connaissez.";
 "premium.feature.noads" = "Sans publicité";
 "premium.feature.noads.detail" = "Jamais de publicité, dans l'app comme sur retromanette.com.";
 "premium.plan.name" = "Abonnement mensuel";
@@ -124,3 +124,27 @@
 "settings.ads.note" = "Retro Manette est gratuit avec publicités. Premium les supprime définitivement.";
 "premium.devices.title" = "Abonnez-vous ici, utilisez-le partout";
 "premium.devices.detail" = "Premium est vendu uniquement dans cette app iOS. Après l'abonnement, connectez-vous avec le même e-mail sur retromanette.com pour utiliser Premium sur votre PC, votre Mac et votre TV.";
+
+"premium.bonus.title" = "Bonus sur retromanette.com";
+"common.cancel" = "Annuler";
+"account.title" = "Compte";
+"account.signin" = "Se connecter";
+"account.signout" = "Se déconnecter";
+"account.delete" = "Supprimer le compte";
+"account.delete.title" = "Supprimer votre compte ?";
+"account.delete.message" = "Votre adresse e-mail et vos sauvegardes cloud sont supprimées définitivement. Vos jeux et sauvegardes sur cet appareil ne sont pas touchés. Les abonnements sont gérés par Apple.";
+"account.intro" = "Connectez-vous avec l'e-mail que vous utilisez sur retromanette.com. Un seul compte pour l'app et le site : Premium fonctionne sur votre PC, votre Mac et votre TV.";
+"account.email" = "E-mail";
+"account.code" = "Code";
+"account.sendCode" = "Envoyer le code";
+"account.codeSent" = "Nous avons envoyé un code à %@. Saisissez-le ci-dessous.";
+"account.verify" = "Se connecter";
+"account.other" = "Utiliser un autre e-mail";
+"account.signedInAs" = "Connecté en tant que";
+"account.signedIn.note" = "Ce compte fonctionne aussi sur retromanette.com, sur votre PC, votre Mac et votre TV.";
+"account.optional" = "La connexion est facultative. L'app fonctionne entièrement sans compte.";
+"account.footer" = "Facultatif. Utilisez le même compte sur retromanette.com.";
+"account.error.network" = "Impossible de joindre le serveur. Vérifiez votre connexion et réessayez.";
+"account.error.code" = "Ce code est incorrect ou a expiré.";
+"account.error.tooMany" = "Trop d'essais. Patientez quelques minutes.";
+"account.error.email" = "Veuillez saisir une adresse e-mail valide.";

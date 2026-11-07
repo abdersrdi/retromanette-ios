@@ -9,6 +9,8 @@ struct SettingsView: View {
     @EnvironmentObject private var router: Router
     @EnvironmentObject private var premium: PremiumStore
     @ObservedObject private var ads = AdsManager.shared
+    @EnvironmentObject private var account: AccountStore
+    @State private var showAccount = false
 
     private var languageName: String {
         let code = Locale.preferredLanguages.first ?? "en"
@@ -25,6 +27,18 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 premiumSection
+                Section {
+                    Button { showAccount = true } label: {
+                        HStack {
+                            Label("account.title", systemImage: "person.crop.circle")
+                            Spacer()
+                            Text(account.email ?? String(localized: "account.signin")).foregroundStyle(Theme.muted).lineLimit(1)
+                        }
+                    }
+                } footer: {
+                    Text("account.footer")
+                }
+                .listRowBackground(Theme.surfaceHigh)
                 if !premium.isPremium { adsSection }
                 Section {
                     HStack {
@@ -74,6 +88,7 @@ struct SettingsView: View {
             .scrollContentBackground(.hidden)
             .background(Theme.background.ignoresSafeArea())
             .navigationTitle("settings.title")
+            .sheet(isPresented: $showAccount) { AccountView() }
             .toolbarBackground(Theme.background, for: .navigationBar)
         }
     }

@@ -16,9 +16,16 @@ struct PremiumView: View {
                 VStack(spacing: 26) {
                     header
                     VStack(spacing: 14) {
+                        feature("nosign", "premium.feature.noads", "premium.feature.noads.detail")
+                        Text("premium.bonus.title")
+                            .font(.system(size: 13, weight: .bold))
+                            .textCase(.uppercase)
+                            .tracking(1.1)
+                            .foregroundStyle(Theme.muted)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.top, 8)
                         feature("icloud.fill", "premium.feature.cloud", "premium.feature.cloud.detail")
                         feature("person.2.fill", "premium.feature.online", "premium.feature.online.detail")
-                        feature("nosign", "premium.feature.noads", "premium.feature.noads.detail")
                     }
                     .padding(.horizontal, 20)
 
