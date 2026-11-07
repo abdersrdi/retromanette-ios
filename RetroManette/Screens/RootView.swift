@@ -74,7 +74,7 @@ struct RootView: View {
             await catalog.load()
             if let game = catalog.game(slug: DebugArgs.value("-tourGame") ?? "tobutobugirl"), let url = try? await ROMStore.ensure(game) {
                 router.play(request(game, url))
-                await pause(26)
+                await pause(14)          // well into the level, before the round can end
                 router.playing = nil
                 await pause(2)
             }
@@ -86,21 +86,21 @@ struct RootView: View {
             await catalog.load()
             guard let game = catalog.game(slug: DebugArgs.value("-tourGame") ?? "tobutobugirl"), let url = try? await ROMStore.ensure(game) else { return }
             tab = 0
-            await pause(3.2)
+            await pause(4.0)
             NotificationCenter.default.post(name: .tourOpenGame, object: game)
-            await pause(2.6)
+            await pause(2.4)
             router.play(request(game, url))
-            await pause(8.5)
+            await pause(8.0)
             NotificationCenter.default.post(name: .tourToggleMenu, object: nil)
-            await pause(2.5)
+            await pause(2.2)
             NotificationCenter.default.post(name: .tourToggleMenu, object: nil)
             await pause(0.8)
             router.playing = nil
-            await pause(1.0)
+            await pause(1.2)
             router.showPremium = true
-            await pause(3.6)
+            await pause(3.4)
             router.showPremium = false
-            await pause(0.6)
+            await pause(0.7)
             tab = 2
         }
         #endif
