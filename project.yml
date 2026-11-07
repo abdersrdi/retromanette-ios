@@ -30,6 +30,7 @@ targets:
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         GCC_C_LANGUAGE_STANDARD: gnu11
         OTHER_LDFLAGS: ["-lmgba_libretro", "-lz"]
+        "EXCLUDED_ARCHS[sdk=iphonesimulator*]": x86_64
         "LIBRARY_SEARCH_PATHS[sdk=iphoneos*]": "$(SRCROOT)/Vendor/cores/iphoneos"
         "LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]": "$(SRCROOT)/Vendor/cores/iphonesimulator"
     info:
