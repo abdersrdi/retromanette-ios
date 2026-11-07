@@ -94,3 +94,24 @@
 "settings.premium.body" = "سيُفتح Premium داخل التطبيق في تحديث قادم، بنفس الحساب المستخدم في retromanette.com.";
 
 "licenses.note" = "يستخدم التطبيق المحاكي mGBA المرخّص بـ MPL-2.0، وشيفرته المصدرية متاحة عبر الروابط أعلاه.";
+
+"premium.title" = "Retro Manette Premium";
+"premium.subtitle" = "حفظ أكثر، لعب مشترك، بلا إعلانات.";
+"premium.feature.cloud" = "9 خانات حفظ سحابي لكل لعبة";
+"premium.feature.cloud.detail" = "تنتقل حالات الحفظ معك إلى كل أجهزتك.";
+"premium.feature.online" = "اللعب عبر الإنترنت مع العائلة والأصدقاء";
+"premium.feature.online.detail" = "العب معاً بدعوة خاصة مع أشخاص تعرفهم.";
+"premium.feature.noads" = "بلا إعلانات";
+"premium.feature.noads.detail" = "لا إعلانات أبداً، في التطبيق وعلى retromanette.com.";
+"premium.plan.name" = "الاشتراك الشهري";
+"premium.price.month" = "%@ شهرياً";
+"premium.unavailable" = "Premium غير متاح للشراء بعد.";
+"premium.cancel" = "ألغِ في أي وقت";
+"premium.subscribe" = "اشترك";
+"premium.restore" = "استعادة المشتريات";
+"premium.active" = "Premium مفعّل";
+"premium.active.short" = "مفعّل";
+"premium.manage" = "عرض Premium";
+"premium.see" = "اكتشف Premium";
+"premium.error" = "تعذّر إتمام الشراء. حاول مرة أخرى.";
+"premium.legal" = "يُحاسَب المبلغ على حساب Apple ID الخاص بك عند تأكيد الشراء. يتجدد الاشتراك تلقائياً كل شهر ما لم تلغِه قبل 24 ساعة على الأقل من نهاية الفترة الحالية. يمكنك إدارته أو إلغاؤه من إعدادات حساب Apple ID بعد الشراء.";

@@ -1,0 +1,40 @@
+name: Store assets
+# App Store screenshots and screen recordings (iPhone and iPad, English, Arabic, French). Start it by hand.
+on:
+  workflow_dispatch:
+    inputs:
+      langs:
+        description: "Languages to capture (space separated)"
+        default: "en ar fr"
+
+jobs:
+  assets:
+    runs-on: macos-15
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tools
+        run: brew install xcodegen cmake
+      - name: Build the emulator core for the simulator
+        run: SDKS=iphonesimulator bash scripts/build_cores.sh
+      - name: Generate the Xcode project
+        run: xcodegen generate
+      - name: Build for the iOS simulator (Debug, so the launch arguments work)
+        run: |
+          set -o pipefail
+          xcodebuild -project RetroManette.xcodeproj -scheme RetroManette -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build CODE_SIGNING_ALLOWED=NO build 2>&1 | tail -n 5
+      - name: Take the pictures
+        env:
+          LANGS: ${{ github.event.inputs.langs }}
+        run: |
+          APP=$(find build/Build/Products -maxdepth 2 -name "RetroManette.app" | head -1)
+          bash scripts/store_assets.sh "$APP"
+      - name: Keep the pictures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: store-assets
+          path: out/store
+          if-no-files-found: ignore

@@ -4,6 +4,7 @@ struct DiscoverView: View {
     @EnvironmentObject private var catalog: CatalogStore
     @EnvironmentObject private var recents: RecentStore
     @State private var query = ""
+    @State private var path = NavigationPath()
 
     private var results: [Game] {
         let q = query.trimmingCharacters(in: .whitespaces).lowercased()
@@ -35,7 +36,7 @@ struct DiscoverView: View {
     }
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             ScrollView {
                 LazyVStack(spacing: 30) {
                     if !query.isEmpty {
@@ -69,6 +70,9 @@ struct DiscoverView: View {
             .searchable(text: $query, prompt: Text("discover.search"))
             .navigationDestination(for: Game.self) { GameDetailView(game: $0) }
             .refreshable { await catalog.load() }
+            .onReceive(NotificationCenter.default.publisher(for: .tourOpenGame)) { note in
+                if let game = note.object as? Game { path.append(game) }
+            }
         }
         .task { await catalog.load() }
     }

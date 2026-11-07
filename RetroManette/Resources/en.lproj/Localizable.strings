@@ -94,3 +94,24 @@
 "settings.premium.body" = "Premium will unlock inside the app in a future update, with the same account as retromanette.com.";
 
 "licenses.note" = "The app uses the mGBA emulator, licensed under MPL-2.0. Its source code is available at the links above.";
+
+"premium.title" = "Retro Manette Premium";
+"premium.subtitle" = "More saves, play together, no ads.";
+"premium.feature.cloud" = "9 cloud save slots per game";
+"premium.feature.cloud.detail" = "Your save states follow you to every device.";
+"premium.feature.online" = "Online play with family and friends";
+"premium.feature.online.detail" = "Play together by private invitation, with people you know.";
+"premium.feature.noads" = "No ads";
+"premium.feature.noads.detail" = "Never an ad, on the app or on retromanette.com.";
+"premium.plan.name" = "Monthly plan";
+"premium.price.month" = "%@ / month";
+"premium.unavailable" = "Premium is not available to buy yet.";
+"premium.cancel" = "Cancel anytime";
+"premium.subscribe" = "Subscribe";
+"premium.restore" = "Restore purchases";
+"premium.active" = "Premium is active";
+"premium.active.short" = "Active";
+"premium.manage" = "View Premium";
+"premium.see" = "See Premium";
+"premium.error" = "The purchase could not be completed. Please try again.";
+"premium.legal" = "Payment is charged to your Apple ID at confirmation of purchase. The subscription renews automatically every month unless it is canceled at least 24 hours before the end of the current period. You can manage or cancel it in your Apple ID account settings after purchase.";

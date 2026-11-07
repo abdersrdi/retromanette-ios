@@ -68,6 +68,12 @@ struct PlayerView: View {
                 }
             }
         }
+        .onReceive(NotificationCenter.default.publisher(for: .tourToggleMenu)) { _ in showMenu.toggle() }
+        .task {
+            #if DEBUG
+            if DebugArgs.has("-demo") || DebugArgs.has("-tour") { await DemoInput.run(session) }
+            #endif
+        }
         .statusBarHidden(true)
         .persistentSystemOverlays(.hidden)
         .onAppear {

@@ -4,6 +4,7 @@ import SwiftUI
 @MainActor
 final class Router: ObservableObject {
     @Published var playing: PlayRequest?
+    @Published var showPremium = false
     func play(_ request: PlayRequest) { playing = request }
 }
 
@@ -13,6 +14,7 @@ struct RetroManetteApp: App {
     @StateObject private var library = LibraryStore()
     @StateObject private var recents = RecentStore()
     @StateObject private var router = Router()
+    @StateObject private var premium = PremiumStore()
 
     init() {
         // covers are cached on disk so the home screen is instant the second time
@@ -32,6 +34,8 @@ struct RetroManetteApp: App {
                 .environmentObject(library)
                 .environmentObject(recents)
                 .environmentObject(router)
+                .environmentObject(premium)
+                .task { await premium.start() }
                 .preferredColorScheme(.dark)
                 .tint(Theme.accent)
         }

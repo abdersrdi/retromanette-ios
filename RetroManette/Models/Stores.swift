@@ -127,6 +127,18 @@ final class LibraryStore: ObservableObject {
         save()
     }
 
+    #if DEBUG
+    /// Screenshot builds: puts a catalog game into the library under a friendly name.
+    func seed(from url: URL, name: String, system: GameSystem) {
+        guard !games.contains(where: { $0.name == name }) else { return }
+        let id = UUID()
+        let fileName = "\(id.uuidString).\(system.fileExtension)"
+        guard (try? FileManager.default.copyItem(at: url, to: Paths.library.appendingPathComponent(fileName))) != nil else { return }
+        games.append(LibraryGame(id: id, name: name, fileName: fileName, system: system, addedAt: Date()))
+        save()
+    }
+    #endif
+
     func remove(_ game: LibraryGame) {
         try? FileManager.default.removeItem(at: url(for: game))
         try? FileManager.default.removeItem(at: Paths.saveFolder(for: game.key))

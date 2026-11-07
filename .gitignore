@@ -16,3 +16,4 @@ xcuserdata/
 *.key
 .env
 .env.*
+out/

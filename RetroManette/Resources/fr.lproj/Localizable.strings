@@ -94,3 +94,24 @@
 "settings.premium.body" = "Premium se débloquera dans l'app lors d'une prochaine mise à jour, avec le même compte que retromanette.com.";
 
 "licenses.note" = "L'app utilise l'émulateur mGBA, sous licence MPL-2.0. Son code source est disponible via les liens ci-dessus.";
+
+"premium.title" = "Retro Manette Premium";
+"premium.subtitle" = "Plus de sauvegardes, jouer ensemble, sans publicité.";
+"premium.feature.cloud" = "9 emplacements de sauvegarde cloud par jeu";
+"premium.feature.cloud.detail" = "Vos sauvegardes vous suivent sur tous vos appareils.";
+"premium.feature.online" = "Jeu en ligne avec famille et amis";
+"premium.feature.online.detail" = "Jouez ensemble sur invitation privée, avec des personnes que vous connaissez.";
+"premium.feature.noads" = "Sans publicité";
+"premium.feature.noads.detail" = "Jamais de publicité, dans l'app comme sur retromanette.com.";
+"premium.plan.name" = "Abonnement mensuel";
+"premium.price.month" = "%@ / mois";
+"premium.unavailable" = "Premium n'est pas encore disponible à l'achat.";
+"premium.cancel" = "Annulable à tout moment";
+"premium.subscribe" = "S'abonner";
+"premium.restore" = "Restaurer les achats";
+"premium.active" = "Premium est actif";
+"premium.active.short" = "Actif";
+"premium.manage" = "Voir Premium";
+"premium.see" = "Découvrir Premium";
+"premium.error" = "L'achat n'a pas pu aboutir. Veuillez réessayer.";
+"premium.legal" = "Le paiement est débité de votre compte Apple ID à la confirmation de l'achat. L'abonnement se renouvelle automatiquement chaque mois, sauf annulation au moins 24 heures avant la fin de la période en cours. Vous pouvez le gérer ou l'annuler dans les réglages de votre compte Apple ID après l'achat.";

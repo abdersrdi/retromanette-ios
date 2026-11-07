@@ -6,6 +6,8 @@ struct SettingsView: View {
     @AppStorage("controlsOpacity") private var controlsOpacity = 0.95
     @AppStorage("smoothScaling") private var smoothScaling = false
     @AppStorage("autoResume") private var autoResume = true
+    @EnvironmentObject private var router: Router
+    @EnvironmentObject private var premium: PremiumStore
 
     private var languageName: String {
         let code = Locale.preferredLanguages.first ?? "en"
@@ -81,20 +83,25 @@ struct SettingsView: View {
                 HStack {
                     Text("settings.premium").font(.display(24)).foregroundStyle(Theme.text)
                     Spacer()
-                    Chip(text: String(localized: "settings.premium.soon"), tint: Theme.accent)
+                    Chip(text: premiumChip, tint: Theme.accent)
                 }
                 premiumRow("nosign", "settings.premium.noAds")
                 premiumRow("icloud.fill", "settings.premium.cloud")
                 premiumRow("person.2.fill", "settings.premium.online")
-                Text("settings.premium.body")
-                    .font(.system(size: 13))
-                    .foregroundStyle(Theme.muted)
+                Button { router.showPremium = true } label: { Text(premium.isPremium ? "premium.manage" : "premium.see") }
+                    .buttonStyle(PrimaryButtonStyle())
             }
             .padding(.vertical, 6)
         }
         .listRowBackground(
             LinearGradient(colors: [Theme.accent.opacity(0.16), Theme.surfaceHigh], startPoint: .topLeading, endPoint: .bottomTrailing)
         )
+    }
+
+    private var premiumChip: String {
+        if premium.isPremium { return String(localized: "premium.active.short") }
+        if let price = premium.displayPrice { return String(format: String(localized: "premium.price.month"), price) }
+        return String(localized: "settings.premium.soon")
     }
 
     private func premiumRow(_ symbol: String, _ key: LocalizedStringKey) -> some View {
