@@ -8,7 +8,6 @@
 #      (name "Retro Manette", primary language English).
 #   2. In Codemagic: add this repository (abdersrdi/retromanette-ios), then Environment variables > create the group
 #      "RetroManette" with these variables:
-#        APP_STORE_APPLE_ID                (the numeric Apple ID of the app, App Store Connect > App Information; not secret)
 #        APP_STORE_CONNECT_ISSUER_ID       (secret)
 #        APP_STORE_CONNECT_KEY_IDENTIFIER  (secret)
 #        APP_STORE_CONNECT_PRIVATE_KEY     (secret: the contents of the .p8 file)
@@ -28,6 +27,8 @@ workflows:
         BUNDLE_ID: "com.retromanette.app"
         XCODE_SCHEME: "RetroManette"
         SDKS: "iphoneos"             # the device build only; the simulator core is only needed on GitHub
+        # Numeric Apple ID of the app in App Store Connect (not a secret).
+        APP_STORE_APPLE_ID: "6832082656"
     scripts:
       - name: Install tools
         script: brew install xcodegen cmake
