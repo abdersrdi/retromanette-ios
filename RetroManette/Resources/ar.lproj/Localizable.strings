@@ -122,8 +122,8 @@
 "settings.ads.until" = "بلا إعلانات حتى %@";
 "settings.ads.privacy" = "خيارات خصوصية الإعلانات";
 "settings.ads.note" = "Retro Manette مجاني بالإعلانات. يزيلها Premium نهائياً.";
-"premium.devices.title" = "اشترك هنا واستخدمه في كل مكان";
-"premium.devices.detail" = "يُباع Premium عبر تطبيق iOS هذا فقط. بعد الاشتراك سجّل الدخول بنفس البريد الإلكتروني على retromanette.com لاستخدام Premium على حاسوبك وماك والتلفاز.";
+"premium.devices.title" = "إضافات على retromanette.com";
+"premium.devices.detail" = "حفظ سحابي واللعب عبر الإنترنت مع العائلة والأصدقاء، على حاسوبك وماك والتلفاز. يُباع Premium عبر تطبيق iOS هذا فقط: اشترك هنا ثم سجّل الدخول بنفس البريد على retromanette.com.";
 
 "premium.bonus.title" = "إضافات على retromanette.com";
 "common.cancel" = "إلغاء";

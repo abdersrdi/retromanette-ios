@@ -35,13 +35,13 @@ enum DemoInput {
         }
         func wait(_ seconds: Double) async { try? await Task.sleep(nanoseconds: UInt64(seconds * 1_000_000_000)) }
 
-        await wait(1.6)
+        await wait(0.8)
         await tap(.start)
-        await wait(1.3)
+        await wait(1.0)
         await tap(.a)
-        await wait(1.3)
+        await wait(1.0)
         await tap(.start)
-        await wait(1.5)
+        await wait(1.2)
         // some playing: the pad moves left and right, A on and off
         let pattern: [(PadButton, Double)] = [(.right, 0.5), (.a, 0.3), (.right, 0.6), (.a, 0.3), (.left, 0.5), (.a, 0.3), (.left, 0.6), (.a, 0.3)]
         for _ in 0..<6 {

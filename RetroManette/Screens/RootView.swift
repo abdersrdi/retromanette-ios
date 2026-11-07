@@ -61,16 +61,24 @@ struct RootView: View {
             if let game = catalog.game(slug: slug), let url = try? await ROMStore.ensure(game) { router.play(request(game, url)) }
         }
 
+        // a warm-up launch: loads the catalog and every cover into the cache, so the recording shows finished screens
+        if DebugArgs.has("-warm") {
+            await catalog.load()
+            for game in catalog.playable { _ = try? await URLSession.shared.data(from: game.coverURL) }
+            try? await Task.sleep(nanoseconds: 2_000_000_000)
+            return
+        }
+
         // the scripted tour: discover, a game's page, playing with the menu, the Premium page, settings
         if DebugArgs.has("-tour") {
             await catalog.load()
             guard let game = catalog.game(slug: DebugArgs.value("-tourGame") ?? "tobutobugirl"), let url = try? await ROMStore.ensure(game) else { return }
             tab = 0
-            await pause(3.0)
+            await pause(3.2)
             NotificationCenter.default.post(name: .tourOpenGame, object: game)
-            await pause(3.0)
+            await pause(2.6)
             router.play(request(game, url))
-            await pause(9.5)
+            await pause(10.5)
             NotificationCenter.default.post(name: .tourToggleMenu, object: nil)
             await pause(2.5)
             NotificationCenter.default.post(name: .tourToggleMenu, object: nil)
@@ -78,7 +86,7 @@ struct RootView: View {
             router.playing = nil
             await pause(1.0)
             router.showPremium = true
-            await pause(4.0)
+            await pause(3.6)
             router.showPremium = false
             await pause(0.6)
             tab = 2

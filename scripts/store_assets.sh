@@ -51,13 +51,18 @@ run_device() {   # $1 = folder name, $2 = simulator name pattern, $3 = fallback 
         shoot "$lang" 07-settings 8 -tab 2
     done
 
-    # screen recordings: a 34 second scripted tour in each language
+    # warm-up launch: covers into the cache so the recordings show finished screens
+    launch en -warm
+    sleep 40
+    xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
+
+    # screen recordings: a scripted tour in each language (about 28 seconds)
     for lang in $LANGS; do
         xcrun simctl io "$UDID" recordVideo --codec=h264 --force "$OUT/video/$dev-$lang.mov" &
         REC=$!
         sleep 2
         launch "$lang" -tour
-        sleep 34
+        sleep 33
         kill -INT "$REC" || true
         wait "$REC" || true
         xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true

@@ -13,20 +13,11 @@ struct PremiumView: View {
                 .allowsHitTesting(false)
 
             ScrollView {
-                VStack(spacing: 26) {
+                VStack(spacing: 16) {
                     header
-                    VStack(spacing: 14) {
+                    VStack(spacing: 10) {
                         feature("nosign", "premium.feature.noads", "premium.feature.noads.detail")
                         feature("square.and.arrow.down.on.square.fill", "premium.feature.slots", "premium.feature.slots.detail")
-                        Text("premium.bonus.title")
-                            .font(.system(size: 13, weight: .bold))
-                            .textCase(.uppercase)
-                            .tracking(1.1)
-                            .foregroundStyle(Theme.muted)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.top, 8)
-                        feature("icloud.fill", "premium.feature.cloud", "premium.feature.cloud.detail")
-                        feature("person.2.fill", "premium.feature.online", "premium.feature.online.detail")
                     }
                     .padding(.horizontal, 20)
 
@@ -35,8 +26,8 @@ struct PremiumView: View {
                     purchaseButtons
                     legal
                 }
-                .padding(.top, 36)
-                .padding(.bottom, 40)
+                .padding(.top, 28)
+                .padding(.bottom, 28)
             }
         }
         .overlay(alignment: .topTrailing) {
@@ -54,18 +45,18 @@ struct PremiumView: View {
     }
 
     private var header: some View {
-        VStack(spacing: 14) {
+        VStack(spacing: 8) {
             ZStack {
-                RoundedRectangle(cornerRadius: 26, style: .continuous)
+                RoundedRectangle(cornerRadius: 19, style: .continuous)
                     .fill(LinearGradient(colors: [Theme.accentSoft, Theme.accent], startPoint: .top, endPoint: .bottom))
-                    .frame(width: 88, height: 88)
+                    .frame(width: 64, height: 64)
                     .shadow(color: Theme.accent.opacity(0.5), radius: 24, y: 8)
                 Image(systemName: "gamecontroller.fill")
-                    .font(.system(size: 40, weight: .bold))
+                    .font(.system(size: 28, weight: .bold))
                     .foregroundStyle(Theme.accentInk)
             }
             Text("premium.title")
-                .font(.display(34))
+                .font(.display(30))
                 .foregroundStyle(Theme.text)
                 .multilineTextAlignment(.center)
             Text("premium.subtitle")
@@ -89,7 +80,7 @@ struct PremiumView: View {
             }
             Spacer(minLength: 0)
         }
-        .padding(14)
+        .padding(12)
         .glassCard()
     }
 

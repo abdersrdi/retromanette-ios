@@ -122,8 +122,8 @@
 "settings.ads.until" = "Sans pub jusqu'à %@";
 "settings.ads.privacy" = "Options de confidentialité des pubs";
 "settings.ads.note" = "Retro Manette est gratuit avec publicités. Premium les supprime définitivement.";
-"premium.devices.title" = "Abonnez-vous ici, utilisez-le partout";
-"premium.devices.detail" = "Premium est vendu uniquement dans cette app iOS. Après l'abonnement, connectez-vous avec le même e-mail sur retromanette.com pour utiliser Premium sur votre PC, votre Mac et votre TV.";
+"premium.devices.title" = "Bonus sur retromanette.com";
+"premium.devices.detail" = "Sauvegarde cloud et jeu en ligne avec famille et amis, sur votre PC, votre Mac et votre TV. Premium est vendu uniquement dans cette app iOS : abonnez-vous ici, puis connectez-vous avec le même e-mail sur retromanette.com.";
 
 "premium.bonus.title" = "Bonus sur retromanette.com";
 "common.cancel" = "Annuler";
