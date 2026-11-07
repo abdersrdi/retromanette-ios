@@ -1,2 +1,3 @@
 "CFBundleDisplayName" = "Retro Manette";
 "CFBundleName" = "Retro Manette";
+"NSUserTrackingUsageDescription" = "Autoriser le suivi permet à Retro Manette d'afficher des publicités plus pertinentes, ce qui aide à garder l'app gratuite. Vos jeux et sauvegardes ne quittent jamais votre appareil.";

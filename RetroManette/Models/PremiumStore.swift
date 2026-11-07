@@ -82,5 +82,6 @@ final class PremiumStore: ObservableObject {
             }
         }
         isPremium = active
+        AdsManager.shared.setPremium(active)
     }
 }

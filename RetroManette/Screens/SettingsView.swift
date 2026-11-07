@@ -8,6 +8,7 @@ struct SettingsView: View {
     @AppStorage("autoResume") private var autoResume = true
     @EnvironmentObject private var router: Router
     @EnvironmentObject private var premium: PremiumStore
+    @ObservedObject private var ads = AdsManager.shared
 
     private var languageName: String {
         let code = Locale.preferredLanguages.first ?? "en"
@@ -24,6 +25,7 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 premiumSection
+                if !premium.isPremium { adsSection }
                 Section {
                     HStack {
                         Label("settings.language", systemImage: "globe")
@@ -96,6 +98,28 @@ struct SettingsView: View {
         .listRowBackground(
             LinearGradient(colors: [Theme.accent.opacity(0.16), Theme.surfaceHigh], startPoint: .topLeading, endPoint: .bottomTrailing)
         )
+    }
+
+    /// Ads: one rewarded video buys an ad-free hour; the privacy options appear where the law asks for them.
+    private var adsSection: some View {
+        Section {
+            if ads.adFreeActive {
+                Label(String(format: String(localized: "settings.ads.until"), ads.adFreeUntil.formatted(date: .omitted, time: .shortened)), systemImage: "checkmark.circle.fill")
+                    .foregroundStyle(Theme.success)
+            } else if ads.canRequestAds && ads.rewardedReady {
+                Button { ads.showRewarded { _ in } } label: {
+                    Label { VStack(alignment: .leading) { Text("settings.ads.remove"); Text("settings.ads.watch").font(.system(size: 12)).foregroundStyle(Theme.muted) } } icon: { Image(systemName: "play.rectangle.fill") }
+                }
+            }
+            if ads.privacyOptionsRequired {
+                Button { ads.presentPrivacyOptions() } label: { Label("settings.ads.privacy", systemImage: "hand.raised") }
+            }
+        } header: {
+            Text("settings.ads")
+        } footer: {
+            Text("settings.ads.note")
+        }
+        .listRowBackground(Theme.surfaceHigh)
     }
 
     private var premiumChip: String {

@@ -115,3 +115,10 @@
 "premium.see" = "Découvrir Premium";
 "premium.error" = "L'achat n'a pas pu aboutir. Veuillez réessayer.";
 "premium.legal" = "Le paiement est débité de votre compte Apple ID à la confirmation de l'achat. L'abonnement se renouvelle automatiquement chaque mois, sauf annulation au moins 24 heures avant la fin de la période en cours. Vous pouvez le gérer ou l'annuler dans les réglages de votre compte Apple ID après l'achat.";
+
+"settings.ads" = "Publicités";
+"settings.ads.remove" = "Retirer les pubs pendant 1 heure";
+"settings.ads.watch" = "Regarder une courte vidéo";
+"settings.ads.until" = "Sans pub jusqu'à %@";
+"settings.ads.privacy" = "Options de confidentialité des pubs";
+"settings.ads.note" = "Retro Manette est gratuit avec publicités. Premium les supprime définitivement.";

@@ -1,2 +1,3 @@
 "CFBundleDisplayName" = "Retro Manette";
 "CFBundleName" = "Retro Manette";
+"NSUserTrackingUsageDescription" = "Allowing tracking lets Retro Manette show ads that are more relevant to you, which helps keep the app free. Your games and saves never leave your device.";

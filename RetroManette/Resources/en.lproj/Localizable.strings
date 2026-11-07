@@ -115,3 +115,10 @@
 "premium.see" = "See Premium";
 "premium.error" = "The purchase could not be completed. Please try again.";
 "premium.legal" = "Payment is charged to your Apple ID at confirmation of purchase. The subscription renews automatically every month unless it is canceled at least 24 hours before the end of the current period. You can manage or cancel it in your Apple ID account settings after purchase.";
+
+"settings.ads" = "Ads";
+"settings.ads.remove" = "Remove ads for 1 hour";
+"settings.ads.watch" = "Watch a short video";
+"settings.ads.until" = "Ad-free until %@";
+"settings.ads.privacy" = "Ad privacy options";
+"settings.ads.note" = "Retro Manette is free with ads. Premium removes them for good.";

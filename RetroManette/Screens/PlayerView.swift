@@ -84,6 +84,7 @@ struct PlayerView: View {
         .onDisappear {
             session.stop()
             UIApplication.shared.isIdleTimerDisabled = false
+            AdsManager.shared.sessionEnded()
         }
         .onChange(of: smoothScaling) { session.setSmoothScaling($0) }
         .onChange(of: showMenu) { session.pause($0 || slotsMode != nil) }

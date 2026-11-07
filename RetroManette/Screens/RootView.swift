@@ -9,12 +9,15 @@ struct RootView: View {
     var body: some View {
         TabView(selection: $tab) {
             DiscoverView()
+                .safeAreaInset(edge: .bottom, spacing: 0) { AdBanner() }
                 .tabItem { Label("tab.discover", systemImage: "sparkles.tv.fill") }
                 .tag(0)
             LibraryView()
+                .safeAreaInset(edge: .bottom, spacing: 0) { AdBanner() }
                 .tabItem { Label("tab.library", systemImage: "square.stack.fill") }
                 .tag(1)
             SettingsView()
+                .safeAreaInset(edge: .bottom, spacing: 0) { AdBanner() }
                 .tabItem { Label("tab.settings", systemImage: "gearshape.fill") }
                 .tag(2)
         }

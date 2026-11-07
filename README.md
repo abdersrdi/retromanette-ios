@@ -9,7 +9,8 @@ wrapper: there is no web view anywhere.
 - **Controls:** glass touch controls with haptics, wireless controllers, save states (9 slots), automatic resume
 - **Catalog:** the same list as the website (`games.json`), with a copy inside the app for offline first launch
 - **Library:** add your own `.gb`, `.gbc`, `.gba` files from Files. They stay on the device and are never uploaded.
-- **Privacy:** no account, no analytics, no ads in this version
+- **Ads and Premium:** free with Google AdMob ads (banner above the tab bar, an interstitial after a game session, a rewarded video for an ad-free hour; never during play). Premium (one monthly plan) removes ads.
+- **Privacy:** no account and no analytics of our own; consent (Google UMP) and Apple's tracking prompt come before any ad
 
 ## Build
 

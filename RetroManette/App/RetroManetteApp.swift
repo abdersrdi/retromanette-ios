@@ -36,6 +36,7 @@ struct RetroManetteApp: App {
                 .environmentObject(router)
                 .environmentObject(premium)
                 .task { await premium.start() }
+                .task { await AdsManager.shared.start() }
                 .preferredColorScheme(.dark)
                 .tint(Theme.accent)
         }
