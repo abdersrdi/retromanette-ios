@@ -22,6 +22,7 @@ struct PremiumView: View {
                     }
                     .padding(.horizontal, 20)
 
+                    devicesCard
                     planCard
                     purchaseButtons
                     legal
@@ -82,6 +83,25 @@ struct PremiumView: View {
         }
         .padding(14)
         .glassCard()
+    }
+
+    /// Premium is sold only here, and the same account unlocks the website on computers and TVs.
+    private var devicesCard: some View {
+        HStack(alignment: .top, spacing: 14) {
+            Image(systemName: "tv.and.mediabox.fill")
+                .font(.system(size: 20, weight: .semibold))
+                .foregroundStyle(Theme.accent)
+                .frame(width: 44, height: 44)
+                .background(Circle().fill(Theme.accent.opacity(0.14)))
+            VStack(alignment: .leading, spacing: 3) {
+                Text("premium.devices.title").font(.system(size: 17, weight: .semibold)).foregroundStyle(Theme.text)
+                Text("premium.devices.detail").font(.system(size: 14)).foregroundStyle(Theme.muted)
+            }
+            Spacer(minLength: 0)
+        }
+        .padding(14)
+        .glassCard()
+        .padding(.horizontal, 20)
     }
 
     /// The single plan: monthly, no yearly option.

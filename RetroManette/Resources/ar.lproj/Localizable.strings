@@ -122,3 +122,5 @@
 "settings.ads.until" = "بلا إعلانات حتى %@";
 "settings.ads.privacy" = "خيارات خصوصية الإعلانات";
 "settings.ads.note" = "Retro Manette مجاني بالإعلانات. يزيلها Premium نهائياً.";
+"premium.devices.title" = "اشترك هنا واستخدمه في كل مكان";
+"premium.devices.detail" = "يُباع Premium عبر تطبيق iOS هذا فقط. بعد الاشتراك سجّل الدخول بنفس البريد الإلكتروني على retromanette.com لاستخدام Premium على حاسوبك وماك والتلفاز.";
