@@ -19,7 +19,7 @@ How to test:
 2. Tap a game, then Play. The game runs on the device with an on-screen controller (wireless controllers also work). The ... menu has save states, fast forward and reset. Free users have 3 save slots.
 3. Library tab: the user can add their own game files from the Files app (.gb, .gbc, .gba). They stay on the device and are never uploaded; the app says to add only games the user owns or has the right to use.
 4. Settings > Account: optional sign-in with an email and a 6-digit code sent to that email. For App Review we created an account whose code is fixed: sign in with the email and password given in the App Review Information fields (type the email, tap Send code, then type the password in the Code field). The account screen also has Sign out and Delete account.
-5. Settings > Premium: one auto-renewing monthly subscription ($9.99) that removes all ads and unlocks save slots 4 to 9. It can be tested with a sandbox account, and "Restore purchases" is on the same page. The same subscription also unlocks extra features on our website, retromanette.com, when the user signs in there with the same email; those website features are not part of this review.
+5. Settings > Premium: one auto-renewing monthly subscription ($3.99) that removes all ads and unlocks save slots 4 to 9. It can be tested with a sandbox account, and "Restore purchases" is on the same page. The same subscription also unlocks extra features on our website, retromanette.com, when the user signs in there with the same email; those website features are not part of this review.
 
 Ads: Google AdMob. On first launch Google's consent form (where required) and Apple's tracking prompt appear before any ad. A banner shows above the tab bar, an interstitial may show after a game session ends, and Settings has an optional rewarded video for one ad-free hour. No ads are shown while a game is being played. Premium removes all ads.
 
@@ -36,7 +36,7 @@ Terms of Use: https://retromanette.com/legal/terms
 **"Your listing or app mentions third-party trademarks."**
 > The app name, subtitle, keywords, description and screenshots contain no console or company names. The formats are written GB, GBC and GBA. A few catalog games show their own title screens, which are made by their authors.
 
-**"What does Premium give inside the app? / Why $9.99?"**
+**"What does Premium give inside the app? / Why a paid subscription?"**
 > Premium removes all ads (banner, interstitial and rewarded) and increases save slots from 3 to 9 per game. It also unlocks extra features on our website for the same account. It is one monthly auto-renewing subscription; there is no other plan. The page shows the price, the renewal terms, Restore purchases, and links to the Terms of Use and Privacy Policy.
 
 **"Why is there an account?"**

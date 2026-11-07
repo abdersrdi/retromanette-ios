@@ -151,7 +151,7 @@ Create it under Subscriptions > a new group named **Retro Manette Premium**. The
 | Reference name | Premium Monthly |
 | Product ID | `com.retromanette.app.premium.monthly` (must match the app exactly) |
 | Duration | 1 month |
-| Price | 9.99 USD (the other countries follow from it) |
+| Price | 3.99 USD (the other countries follow from it) |
 | Display name / description (45) | `Premium` / `No ads and 9 save slots per game` |
 | Arabic | `Premium` / `بلا إعلانات و9 خانات حفظ` |
 | French | `Premium` / `Sans pub et 9 emplacements de sauvegarde` |

@@ -2,7 +2,7 @@ import Foundation
 import StoreKit
 
 /// Premium is one auto-renewing monthly subscription. There is no yearly plan. The product is created in App Store Connect
-/// (subscription group "Retro Manette Premium", product ID below, price 9.99 USD a month); until it exists the page shows
+/// (subscription group "Retro Manette Premium", product ID below, price 3.99 USD a month); until it exists the page shows
 /// the plan but the button stays disabled, so nothing can be bought before the product is live.
 @MainActor
 final class PremiumStore: ObservableObject {
@@ -25,7 +25,7 @@ final class PremiumStore: ObservableObject {
     }
 
     /// The price as the App Store formats it for the user's country; the sample only appears in screenshot builds.
-    var displayPrice: String? { product?.displayPrice ?? (screenshotMode ? "$9.99" : nil) }
+    var displayPrice: String? { product?.displayPrice ?? (screenshotMode ? "$3.99" : nil) }
     var canPurchase: Bool { (product != nil || screenshotMode) && !isPremium && !isBusy }
 
     func start() async {
