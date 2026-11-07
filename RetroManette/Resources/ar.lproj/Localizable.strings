@@ -1,0 +1,96 @@
+"app.name" = "Retro Manette";
+
+"tab.discover" = "استكشف";
+"tab.library" = "مكتبتي";
+"tab.settings" = "الإعدادات";
+
+"discover.featured" = "لعبة اليوم";
+"discover.continue" = "تابع اللعب";
+"discover.search" = "ابحث عن لعبة";
+"discover.noResults" = "لا توجد ألعاب مطابقة.";
+"discover.loadError" = "تعذّر تحميل الألعاب. تحقّق من اتصالك بالإنترنت.";
+"discover.nes" = "ألعاب NES قادمة في تحديث قادم.";
+
+"common.retry" = "أعد المحاولة";
+"common.ok" = "حسناً";
+"common.delete" = "حذف";
+"common.done" = "تم";
+
+"system.gb" = "Game Boy";
+"system.gbc" = "Game Boy Color";
+"system.gba" = "Game Boy Advance";
+"system.nes" = "NES";
+
+"genre.puzzle" = "ألغاز";
+"genre.platformer" = "منصّات";
+"genre.shooter" = "إطلاق نار";
+"genre.other" = "متنوّعة";
+"genre.action" = "حركة";
+"genre.simulation" = "محاكاة";
+"genre.rpg" = "تقمّص أدوار";
+"genre.sports" = "رياضة";
+"genre.strategy" = "استراتيجية";
+"genre.adventure" = "مغامرة";
+
+"detail.players.one" = "لاعب واحد";
+"detail.players.many" = "%d لاعبين";
+"detail.play" = "العب";
+"detail.downloading" = "جارٍ التحميل…";
+"detail.downloadFailed" = "تعذّر تحميل اللعبة. تحقّق من اتصالك وحاول مجدداً.";
+"detail.license" = "الرخصة";
+"detail.licenseText" = "نص الرخصة";
+"detail.source" = "الكود المصدري للعبة";
+"detail.footer" = "وزّع صانعو هذه اللعبة نسختها بإذنهم أو برخصة مفتوحة.";
+
+"library.title" = "مكتبتي";
+"library.import" = "إضافة لعبة";
+"library.unsupported" = "نوع الملف غير مدعوم. الأنواع المدعومة: ‎.gb و‎.gbc و‎.gba";
+"library.importFailed" = "تعذّرت إضافة الملف.";
+"library.empty.title" = "مكتبتك فارغة";
+"library.empty.body" = "أضف ألعابك الخاصة من تطبيق «الملفات». تبقى على جهازك ولا تُرفع إلى أي مكان.";
+"library.footer" = "أضف فقط الألعاب التي تملكها أو لديك الحق في استخدامها.";
+
+"player.menu" = "القائمة";
+"player.resume" = "متابعة";
+"player.save" = "حفظ الحالة";
+"player.load" = "تحميل حالة";
+"player.fast" = "تسريع";
+"player.smooth" = "تنعيم الصورة";
+"player.reset" = "إعادة تشغيل اللعبة";
+"player.exit" = "الخروج من اللعبة";
+"player.saved" = "تم الحفظ";
+"player.loaded" = "تم التحميل";
+"player.failed" = "تعذّر تنفيذ العملية";
+"player.slot" = "الخانة %d";
+"player.empty" = "فارغة";
+"player.error.file" = "تعذّر فتح ملف اللعبة.";
+"player.error.core" = "لم يتمكّن المحاكي من تشغيل هذه اللعبة.";
+"player.error.memory" = "لا توجد ذاكرة كافية لتشغيل اللعبة.";
+"pad.select" = "Select";
+"pad.start" = "Start";
+
+"settings.title" = "الإعدادات";
+"settings.language" = "اللغة";
+"settings.openSettings" = "فتح إعدادات اللغة في iOS";
+"settings.language.note" = "يتبع التطبيق لغة جهازك: العربية أو الفرنسية أو الإنجليزية. لتغيير لغة هذا التطبيق وحده افتح إعدادات iOS.";
+"settings.controls" = "التحكم والشاشة";
+"settings.haptics" = "اهتزاز الأزرار";
+"settings.opacity" = "شفافية أزرار اللمس";
+"settings.smooth" = "تنعيم الصورة";
+"settings.resume" = "استئناف من حيث توقفت";
+"settings.controllers.note" = "تعمل أذرع التحكم اللاسلكية (Xbox وPlayStation وغيرها) تلقائياً.";
+"settings.about" = "حول التطبيق";
+"settings.website" = "الموقع";
+"settings.privacy" = "سياسة الخصوصية";
+"settings.terms" = "شروط الاستخدام";
+"settings.contact" = "تواصل معنا";
+"settings.licenses" = "التراخيص";
+"settings.version" = "الإصدار";
+"settings.premium" = "Premium";
+"settings.premium.soon" = "قريباً";
+"settings.premium.noAds" = "بلا إعلانات";
+"settings.premium.cloud" = "9 خانات حفظ سحابي لكل لعبة";
+"settings.premium.online" = "اللعب عبر الإنترنت مع العائلة والأصدقاء";
+"settings.premium.body" = "سيُفتح Premium داخل التطبيق في تحديث قادم، بنفس الحساب المستخدم في retromanette.com.";
+
+"licenses.note" = "يستخدم التطبيق المحاكي mGBA المرخّص بـ MPL-2.0، وشيفرته المصدرية متاحة عبر الروابط أعلاه.";

@@ -1,0 +1,18 @@
+# generated
+*.xcodeproj
+.build-cores/
+Vendor/cores/
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+
+# never commit signing material or keys
+*.p8
+*.p12
+*.pem
+*.mobileprovision
+*.key
+.env
+.env.*

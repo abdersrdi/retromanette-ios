@@ -1,0 +1,50 @@
+name: iOS build
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tools
+        run: brew install xcodegen cmake
+
+      - name: Build the emulator core (mGBA) for device and simulator
+        run: bash scripts/build_cores.sh
+
+      - name: Generate the Xcode project
+        run: xcodegen generate
+
+      - name: Build for the iOS simulator
+        run: |
+          set -o pipefail
+          xcodebuild -project RetroManette.xcodeproj -scheme RetroManette -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build.log | tail -n 40
+
+      - name: Show compiler errors
+        if: failure()
+        run: grep -h -E "error:|warning: unused|ld: " build.log | sort -u | head -60 || true
+
+      - name: Build for a device (no signing)
+        run: |
+          set -o pipefail
+          xcodebuild -project RetroManette.xcodeproj -scheme RetroManette -configuration Release \
+            -sdk iphoneos -destination 'generic/platform=iOS' \
+            -derivedDataPath build-device CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build-device.log | tail -n 20
+
+      - name: Keep the logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: |
+            build.log
+            build-device.log
+          if-no-files-found: ignore

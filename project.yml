@@ -1,0 +1,60 @@
+name: RetroManette
+options:
+  bundleIdPrefix: com.retromanette
+  deploymentTarget:
+    iOS: "16.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+targets:
+  RetroManette:
+    type: application
+    platform: iOS
+    sources:
+      - path: RetroManette
+        excludes:
+          - "**/*.md"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.retromanette.app
+        PRODUCT_NAME: RetroManette
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_OBJC_BRIDGING_HEADER: RetroManette/Emulation/RetroManette-Bridging-Header.h
+        HEADER_SEARCH_PATHS: "$(SRCROOT)/Vendor/libretro"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        GCC_C_LANGUAGE_STANDARD: gnu11
+        OTHER_LDFLAGS: ["-lmgba_libretro", "-lz"]
+        "LIBRARY_SEARCH_PATHS[sdk=iphoneos*]": "$(SRCROOT)/Vendor/cores/iphoneos"
+        "LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]": "$(SRCROOT)/Vendor/cores/iphonesimulator"
+    info:
+      path: RetroManette/Info.plist
+      properties:
+        CFBundleDisplayName: Retro Manette
+        CFBundleLocalizations: [en, ar, fr]
+        CFBundleDevelopmentRegion: en
+        LSApplicationCategoryType: public.app-category.games
+        ITSAppUsesNonExemptEncryption: false
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        UIApplicationSupportsIndirectInputEvents: true
+        UIStatusBarStyle: UIStatusBarStyleLightContent
+        UIViewControllerBasedStatusBarAppearance: true
+schemes:
+  RetroManette:
+    build:
+      targets:
+        RetroManette: all
+    run:
+      config: Debug
+    archive:
+      config: Release

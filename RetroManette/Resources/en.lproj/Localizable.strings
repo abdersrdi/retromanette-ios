@@ -1,0 +1,96 @@
+"app.name" = "Retro Manette";
+
+"tab.discover" = "Discover";
+"tab.library" = "Library";
+"tab.settings" = "Settings";
+
+"discover.featured" = "Game of the day";
+"discover.continue" = "Continue playing";
+"discover.search" = "Search games";
+"discover.noResults" = "No games found.";
+"discover.loadError" = "Could not load the games. Check your internet connection.";
+"discover.nes" = "NES games are coming in a future update.";
+
+"common.retry" = "Try again";
+"common.ok" = "OK";
+"common.delete" = "Delete";
+"common.done" = "Done";
+
+"system.gb" = "Game Boy";
+"system.gbc" = "Game Boy Color";
+"system.gba" = "Game Boy Advance";
+"system.nes" = "NES";
+
+"genre.puzzle" = "Puzzle";
+"genre.platformer" = "Platformer";
+"genre.shooter" = "Shooter";
+"genre.other" = "Other";
+"genre.action" = "Action";
+"genre.simulation" = "Simulation";
+"genre.rpg" = "Role-playing";
+"genre.sports" = "Sports";
+"genre.strategy" = "Strategy";
+"genre.adventure" = "Adventure";
+
+"detail.players.one" = "1 player";
+"detail.players.many" = "%d players";
+"detail.play" = "Play";
+"detail.downloading" = "Downloading…";
+"detail.downloadFailed" = "Could not download the game. Check your connection and try again.";
+"detail.license" = "License";
+"detail.licenseText" = "License text";
+"detail.source" = "Game source code";
+"detail.footer" = "This game is distributed by its authors with their permission or under an open license.";
+
+"library.title" = "Library";
+"library.import" = "Add a game";
+"library.unsupported" = "This file type is not supported. Supported types: .gb, .gbc, .gba";
+"library.importFailed" = "The file could not be added.";
+"library.empty.title" = "Your library is empty";
+"library.empty.body" = "Add your own games from the Files app. They stay on this device and are never uploaded.";
+"library.footer" = "Only add games you own or have the right to use.";
+
+"player.menu" = "Menu";
+"player.resume" = "Resume";
+"player.save" = "Save state";
+"player.load" = "Load state";
+"player.fast" = "Fast forward";
+"player.smooth" = "Smooth picture";
+"player.reset" = "Reset game";
+"player.exit" = "Exit game";
+"player.saved" = "Saved";
+"player.loaded" = "Loaded";
+"player.failed" = "That did not work";
+"player.slot" = "Slot %d";
+"player.empty" = "Empty";
+"player.error.file" = "The game file could not be opened.";
+"player.error.core" = "The emulator could not start this game.";
+"player.error.memory" = "Not enough memory to start the game.";
+"pad.select" = "Select";
+"pad.start" = "Start";
+
+"settings.title" = "Settings";
+"settings.language" = "Language";
+"settings.openSettings" = "Open language settings in iOS";
+"settings.language.note" = "The app follows your device language: English, French or Arabic. To change the language of this app only, open iOS Settings.";
+"settings.controls" = "Controls and screen";
+"settings.haptics" = "Button vibration";
+"settings.opacity" = "Touch controls opacity";
+"settings.smooth" = "Smooth picture";
+"settings.resume" = "Resume where you left off";
+"settings.controllers.note" = "Wireless controllers (Xbox, PlayStation and others) work automatically.";
+"settings.about" = "About";
+"settings.website" = "Website";
+"settings.privacy" = "Privacy policy";
+"settings.terms" = "Terms of use";
+"settings.contact" = "Contact us";
+"settings.licenses" = "Licenses";
+"settings.version" = "Version";
+"settings.premium" = "Premium";
+"settings.premium.soon" = "Coming soon";
+"settings.premium.noAds" = "No ads";
+"settings.premium.cloud" = "9 cloud save slots per game";
+"settings.premium.online" = "Online play with family and friends";
+"settings.premium.body" = "Premium will unlock inside the app in a future update, with the same account as retromanette.com.";
+
+"licenses.note" = "The app uses the mGBA emulator, licensed under MPL-2.0. Its source code is available at the links above.";

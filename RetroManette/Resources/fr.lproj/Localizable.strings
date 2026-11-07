@@ -1,0 +1,96 @@
+"app.name" = "Retro Manette";
+
+"tab.discover" = "Découvrir";
+"tab.library" = "Bibliothèque";
+"tab.settings" = "Réglages";
+
+"discover.featured" = "Jeu du jour";
+"discover.continue" = "Reprendre";
+"discover.search" = "Rechercher un jeu";
+"discover.noResults" = "Aucun jeu trouvé.";
+"discover.loadError" = "Impossible de charger les jeux. Vérifiez votre connexion Internet.";
+"discover.nes" = "Les jeux NES arriveront dans une prochaine mise à jour.";
+
+"common.retry" = "Réessayer";
+"common.ok" = "OK";
+"common.delete" = "Supprimer";
+"common.done" = "Terminé";
+
+"system.gb" = "Game Boy";
+"system.gbc" = "Game Boy Color";
+"system.gba" = "Game Boy Advance";
+"system.nes" = "NES";
+
+"genre.puzzle" = "Puzzle";
+"genre.platformer" = "Plateforme";
+"genre.shooter" = "Tir";
+"genre.other" = "Divers";
+"genre.action" = "Action";
+"genre.simulation" = "Simulation";
+"genre.rpg" = "Jeu de rôle";
+"genre.sports" = "Sport";
+"genre.strategy" = "Stratégie";
+"genre.adventure" = "Aventure";
+
+"detail.players.one" = "1 joueur";
+"detail.players.many" = "%d joueurs";
+"detail.play" = "Jouer";
+"detail.downloading" = "Téléchargement…";
+"detail.downloadFailed" = "Impossible de télécharger le jeu. Vérifiez votre connexion et réessayez.";
+"detail.license" = "Licence";
+"detail.licenseText" = "Texte de la licence";
+"detail.source" = "Code source du jeu";
+"detail.footer" = "Ce jeu est distribué par ses auteurs avec leur accord ou sous licence libre.";
+
+"library.title" = "Bibliothèque";
+"library.import" = "Ajouter un jeu";
+"library.unsupported" = "Ce type de fichier n'est pas pris en charge. Types acceptés : .gb, .gbc, .gba";
+"library.importFailed" = "Le fichier n'a pas pu être ajouté.";
+"library.empty.title" = "Votre bibliothèque est vide";
+"library.empty.body" = "Ajoutez vos propres jeux depuis l'app Fichiers. Ils restent sur cet appareil et ne sont jamais envoyés ailleurs.";
+"library.footer" = "N'ajoutez que des jeux que vous possédez ou que vous avez le droit d'utiliser.";
+
+"player.menu" = "Menu";
+"player.resume" = "Reprendre";
+"player.save" = "Sauvegarder l'état";
+"player.load" = "Charger un état";
+"player.fast" = "Avance rapide";
+"player.smooth" = "Image lissée";
+"player.reset" = "Redémarrer le jeu";
+"player.exit" = "Quitter le jeu";
+"player.saved" = "Sauvegardé";
+"player.loaded" = "Chargé";
+"player.failed" = "Cela n'a pas fonctionné";
+"player.slot" = "Emplacement %d";
+"player.empty" = "Vide";
+"player.error.file" = "Le fichier du jeu n'a pas pu être ouvert.";
+"player.error.core" = "L'émulateur n'a pas pu lancer ce jeu.";
+"player.error.memory" = "Mémoire insuffisante pour lancer le jeu.";
+"pad.select" = "Select";
+"pad.start" = "Start";
+
+"settings.title" = "Réglages";
+"settings.language" = "Langue";
+"settings.openSettings" = "Ouvrir les réglages de langue d'iOS";
+"settings.language.note" = "L'app suit la langue de votre appareil : français, anglais ou arabe. Pour changer la langue de cette app seulement, ouvrez les Réglages d'iOS.";
+"settings.controls" = "Commandes et écran";
+"settings.haptics" = "Vibration des boutons";
+"settings.opacity" = "Opacité des commandes tactiles";
+"settings.smooth" = "Image lissée";
+"settings.resume" = "Reprendre là où vous étiez";
+"settings.controllers.note" = "Les manettes sans fil (Xbox, PlayStation et autres) fonctionnent automatiquement.";
+"settings.about" = "À propos";
+"settings.website" = "Site web";
+"settings.privacy" = "Politique de confidentialité";
+"settings.terms" = "Conditions d'utilisation";
+"settings.contact" = "Nous contacter";
+"settings.licenses" = "Licences";
+"settings.version" = "Version";
+"settings.premium" = "Premium";
+"settings.premium.soon" = "Bientôt";
+"settings.premium.noAds" = "Sans publicité";
+"settings.premium.cloud" = "9 emplacements de sauvegarde cloud par jeu";
+"settings.premium.online" = "Jeu en ligne avec famille et amis";
+"settings.premium.body" = "Premium se débloquera dans l'app lors d'une prochaine mise à jour, avec le même compte que retromanette.com.";
+
+"licenses.note" = "L'app utilise l'émulateur mGBA, sous licence MPL-2.0. Son code source est disponible via les liens ci-dessus.";
