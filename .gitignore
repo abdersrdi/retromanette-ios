@@ -17,3 +17,6 @@ xcuserdata/
 .env
 .env.*
 out/
+store/screenshots/
+store/recordings/
+store/iap/

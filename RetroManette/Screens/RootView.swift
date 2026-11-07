@@ -64,8 +64,20 @@ struct RootView: View {
         // a warm-up launch: loads the catalog and every cover into the cache, so the recording shows finished screens
         if DebugArgs.has("-warm") {
             await catalog.load()
-            for game in catalog.playable { _ = try? await URLSession.shared.data(from: game.coverURL) }
+            for game in catalog.playable { _ = await CoverStore.shared.image(for: game.coverURL) }
             try? await Task.sleep(nanoseconds: 2_000_000_000)
+            return
+        }
+
+        // plays the game until it is well into the level, then leaves it: the app saves a resume point that the tour starts from
+        if DebugArgs.has("-makeResume") {
+            await catalog.load()
+            if let game = catalog.game(slug: DebugArgs.value("-tourGame") ?? "tobutobugirl"), let url = try? await ROMStore.ensure(game) {
+                router.play(request(game, url))
+                await pause(26)
+                router.playing = nil
+                await pause(2)
+            }
             return
         }
 
@@ -78,7 +90,7 @@ struct RootView: View {
             NotificationCenter.default.post(name: .tourOpenGame, object: game)
             await pause(2.6)
             router.play(request(game, url))
-            await pause(10.5)
+            await pause(8.5)
             NotificationCenter.default.post(name: .tourToggleMenu, object: nil)
             await pause(2.5)
             NotificationCenter.default.post(name: .tourToggleMenu, object: nil)

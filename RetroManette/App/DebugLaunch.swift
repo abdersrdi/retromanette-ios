@@ -27,7 +27,7 @@ enum DebugArgs {
 
 /// Button presses for a game that is already running: START through the menus, then some playing.
 enum DemoInput {
-    static func run(_ session: EmulatorSession) async {
+    static func run(_ session: EmulatorSession, skipIntro: Bool = false) async {
         func tap(_ button: PadButton, hold: Double = 0.18) async {
             session.press(button, down: true)
             try? await Task.sleep(nanoseconds: UInt64(hold * 1_000_000_000))
@@ -35,13 +35,17 @@ enum DemoInput {
         }
         func wait(_ seconds: Double) async { try? await Task.sleep(nanoseconds: UInt64(seconds * 1_000_000_000)) }
 
-        await wait(0.8)
-        await tap(.start)
-        await wait(1.0)
-        await tap(.a)
-        await wait(1.0)
-        await tap(.start)
-        await wait(1.2)
+        if skipIntro {
+            await wait(0.6)
+        } else {
+            await wait(0.8)
+            await tap(.start)
+            await wait(1.0)
+            await tap(.a)
+            await wait(1.0)
+            await tap(.start)
+            await wait(1.2)
+        }
         // some playing: the pad moves left and right, A on and off
         let pattern: [(PadButton, Double)] = [(.right, 0.5), (.a, 0.3), (.right, 0.6), (.a, 0.3), (.left, 0.5), (.a, 0.3), (.left, 0.6), (.a, 0.3)]
         for _ in 0..<6 {

@@ -80,20 +80,26 @@ struct SectionHeader: View {
     }
 }
 
-/// A cover image with a graceful placeholder.
+/// A cover image with a graceful placeholder. It is downloaded once and then read from the device (CoverStore).
 struct CoverImage: View {
     let url: URL?
+    @State private var image: UIImage?
+
     var body: some View {
-        AsyncImage(url: url, transaction: Transaction(animation: .easeOut(duration: 0.25))) { phase in
-            switch phase {
-            case .success(let image):
-                image.resizable().interpolation(.none).scaledToFill()
-            default:
+        ZStack {
+            if let image {
+                Image(uiImage: image).resizable().interpolation(.none).scaledToFill().transition(.opacity)
+            } else {
                 ZStack {
                     Theme.surface
                     Image(systemName: "gamecontroller.fill").font(.system(size: 26)).foregroundStyle(Theme.muted.opacity(0.5))
                 }
             }
+        }
+        .animation(.easeOut(duration: 0.2), value: image != nil)
+        .task(id: url) {
+            guard let url else { return }
+            image = await CoverStore.shared.image(for: url)
         }
     }
 }

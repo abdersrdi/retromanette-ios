@@ -53,7 +53,11 @@ run_device() {   # $1 = folder name, $2 = simulator name pattern, $3 = fallback 
 
     # warm-up launch: covers into the cache so the recordings show finished screens
     launch en -warm
-    sleep 40
+    sleep 45
+    xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
+    # play the game to a mid-level moment and leave it: the app saves a resume point for the tour
+    launch en -makeResume -demo
+    sleep 50
     xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
 
     # screen recordings: a scripted tour in each language (about 28 seconds)

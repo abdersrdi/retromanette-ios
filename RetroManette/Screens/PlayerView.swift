@@ -72,7 +72,7 @@ struct PlayerView: View {
         .onReceive(NotificationCenter.default.publisher(for: .tourToggleMenu)) { _ in showMenu.toggle() }
         .task {
             #if DEBUG
-            if DebugArgs.has("-demo") || DebugArgs.has("-tour") { await DemoInput.run(session) }
+            if DebugArgs.has("-demo") || DebugArgs.has("-tour") { await DemoInput.run(session, skipIntro: DebugArgs.has("-tour")) }
             #endif
         }
         .statusBarHidden(true)
