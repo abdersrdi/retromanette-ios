@@ -31,11 +31,10 @@ struct HeroCard: View {
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            CoverImage(url: game.coverURL)
-                .frame(maxWidth: .infinity)
-                .frame(height: 340)
+            // the clear base takes the width it is offered; the cover only fills it, so it can never push the card wider
+            Color.clear
+                .overlay { CoverImage(url: game.coverURL).scaledToFill() }
                 .clipped()
-                .blur(radius: 0.3)
             LinearGradient(colors: [.clear, .black.opacity(0.35), .black.opacity(0.88)], startPoint: .center, endPoint: .bottom)
             VStack(alignment: .leading, spacing: 6) {
                 Text("discover.featured")
@@ -53,6 +52,7 @@ struct HeroCard: View {
             }
             .padding(20)
         }
+        .frame(maxWidth: .infinity)
         .frame(height: 340)
         .clipShape(RoundedRectangle(cornerRadius: Theme.radiusLarge, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: Theme.radiusLarge, style: .continuous).stroke(Theme.borderStrong, lineWidth: 1))

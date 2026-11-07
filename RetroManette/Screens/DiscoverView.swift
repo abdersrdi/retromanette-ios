@@ -23,6 +23,9 @@ struct DiscoverView: View {
         recents.entries.compactMap { entry in entry.slug.flatMap { catalog.game(slug: $0) } }
     }
 
+    /// A plain String key (an interpolated literal would be looked up as "genre.%@" and show up untranslated).
+    private func genreTitle(_ genre: String) -> LocalizedStringKey { LocalizedStringKey("genre." + genre) }
+
     private var genreRails: [(genre: String, games: [Game])] {
         let grouped = Dictionary(grouping: catalog.playable, by: { $0.genre })
         return grouped
@@ -45,7 +48,7 @@ struct DiscoverView: View {
                         let gba = catalog.games(for: .gba)
                         if !gba.isEmpty { GameRail(title: "system.gba", games: gba) }
                         ForEach(genreRails, id: \.genre) { rail in
-                            GameRail(title: LocalizedStringKey("genre.\(rail.genre)"), games: rail.games)
+                            GameRail(title: genreTitle(rail.genre), games: rail.games)
                         }
                         if catalog.playable.isEmpty { emptyState }
                         if catalog.comingSoonCount > 0 {

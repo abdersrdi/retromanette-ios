@@ -96,12 +96,12 @@ struct PlayerView: View {
     private func portraitLayout(_ geo: GeometryProxy) -> some View {
         VStack(spacing: 0) {
             topBar.padding(.top, 6)
+            Spacer(minLength: 8)
             GameScreenView(layer: session.videoLayer)
                 .aspectRatio(session.aspect, contentMode: .fit)
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 10)
-                .padding(.top, 8)
-            Spacer(minLength: 12)
+            Spacer(minLength: 16)
             VStack(spacing: 18) {
                 HStack {
                     PadPill(label: "L", button: .l, width: 84, height: 36, press: session.press)
