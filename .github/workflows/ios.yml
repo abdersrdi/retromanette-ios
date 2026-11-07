@@ -40,6 +40,21 @@ jobs:
             -sdk iphoneos -destination 'generic/platform=iOS' \
             -derivedDataPath build-device CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build-device.log | tail -n 20
 
+      - name: Run the app in the simulator and take screenshots
+        if: always()
+        run: |
+          APP=$(find build/Build/Products -maxdepth 2 -name "RetroManette.app" | head -1)
+          echo "App: $APP"
+          bash scripts/screenshots.sh "$APP"
+
+      - name: Keep the screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: out/screenshots
+          if-no-files-found: ignore
+
       - name: Keep the logs
         if: always()
         uses: actions/upload-artifact@v4
