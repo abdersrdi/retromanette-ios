@@ -20,7 +20,7 @@ git -C "$WORK/mgba" fetch -q --depth 1 origin "$MGBA_REF"
 git -C "$WORK/mgba" checkout -q FETCH_HEAD
 echo "mGBA at $(git -C "$WORK/mgba" rev-parse --short HEAD)"
 
-for SDK in iphoneos iphonesimulator; do
+for SDK in ${SDKS:-iphoneos iphonesimulator}; do
     BUILD="$WORK/build-$SDK"
     rm -rf "$BUILD"
     cmake -S "$WORK/mgba" -B "$BUILD" -G "Unix Makefiles" \

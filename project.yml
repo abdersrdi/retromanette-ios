@@ -37,6 +37,8 @@ targets:
       path: RetroManette/Info.plist
       properties:
         CFBundleDisplayName: Retro Manette
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         CFBundleLocalizations: [en, ar, fr]
         CFBundleDevelopmentRegion: en
         LSApplicationCategoryType: public.app-category.games

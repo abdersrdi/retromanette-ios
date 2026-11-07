@@ -1,0 +1,79 @@
+# Codemagic: signed iOS build of Retro Manette, published to TestFlight.
+#
+# Works on a personal Codemagic account. Credentials come from an environment variable group named "RetroManette"
+# (see `groups:` below). Nothing secret is ever written in this file or anywhere else in the repository: the repository is public.
+#
+# One-time setup:
+#   1. In the Apple Developer account register the bundle ID com.retromanette.app, then create the app in App Store Connect with it
+#      (name "Retro Manette", primary language English).
+#   2. In Codemagic: add this repository (abdersrdi/retromanette-ios), then Environment variables > create the group
+#      "RetroManette" with these variables:
+#        APP_STORE_APPLE_ID                (the numeric Apple ID of the app, App Store Connect > App Information; not secret)
+#        APP_STORE_CONNECT_ISSUER_ID       (secret)
+#        APP_STORE_CONNECT_KEY_IDENTIFIER  (secret)
+#        APP_STORE_CONNECT_PRIVATE_KEY     (secret: the contents of the .p8 file)
+#        CERTIFICATE_PRIVATE_KEY_B64       (secret: the RSA key as ONE line of base64)
+#      They are the same API key and certificate key the other apps use.
+#   3. Start the workflow "retromanette-ios" by hand on branch main. It has no automatic trigger, so a push never uses build minutes.
+workflows:
+  retromanette-ios:
+    name: Retro Manette iOS (TestFlight)
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      xcode: latest
+      groups:
+        - RetroManette
+      vars:
+        BUNDLE_ID: "com.retromanette.app"
+        XCODE_SCHEME: "RetroManette"
+        SDKS: "iphoneos"             # the device build only; the simulator core is only needed on GitHub
+    scripts:
+      - name: Install tools
+        script: brew install xcodegen cmake
+      - name: Build the emulator core (mGBA)
+        script: bash "$CM_BUILD_DIR/scripts/build_cores.sh"
+      - name: Generate the Xcode project
+        script: cd "$CM_BUILD_DIR" && xcodegen generate
+      - name: Fetch signing files from App Store Connect
+        script: |
+          set -e
+          # The certificate key is stored as one line of base64, which survives copy/paste in the web form.
+          echo "$CERTIFICATE_PRIVATE_KEY_B64" | tr -d ' \r\n' | base64 --decode > /tmp/certificate_key.pem
+          keychain initialize
+          app-store-connect fetch-signing-files "$BUNDLE_ID" \
+            --type IOS_APP_STORE \
+            --certificate-key @file:/tmp/certificate_key.pem \
+            --create
+          keychain add-certificates
+      - name: Set up code signing on the Xcode project
+        script: |
+          cd "$CM_BUILD_DIR"
+          xcode-project use-profiles --project RetroManette.xcodeproj
+      - name: Increment build number
+        script: |
+          cd "$CM_BUILD_DIR"
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null || echo 0)
+          LATEST=${LATEST:-0}
+          agvtool new-version -all $((LATEST + 1))
+      - name: Build the ipa
+        script: |
+          cd "$CM_BUILD_DIR"
+          if ! xcode-project build-ipa \
+            --project RetroManette.xcodeproj \
+            --scheme "$XCODE_SCHEME"; then
+            echo "=================== COMPILER ERRORS ==================="
+            grep -h "error:" /tmp/xcodebuild_logs/*.log 2>/dev/null | sed 's#/Users/builder/clone/##' | sort -u | head -40
+            echo "======================================================="
+            exit 1
+          fi
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+    publishing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
+        submit_to_testflight: false
+        submit_to_app_store: false
