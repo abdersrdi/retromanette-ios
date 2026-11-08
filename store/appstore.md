@@ -133,14 +133,20 @@ Apple works out the rating from this (expect 9+ or a little higher). Do not choo
 
 ## 4. App Privacy (the "nutrition label")
 
+Answer **Yes** to "Do you or your third-party partners collect data from this app?". Google's ad SDK collects the items below; check them
+against Google's page "AdMob: data disclosure for Apple's App Privacy details", which Google keeps up to date.
+
 | Data | Collected | Linked to the user | Used to track | Why |
 |---|---|---|---|---|
 | Contact Info > Email address | Yes, only if the user signs in | Yes | No | App functionality (the optional account) |
-| Identifiers > Device ID | Yes (AdMob) | No | **Yes** | Third-party advertising |
-| Usage Data > Product interaction and Advertising data | Yes (AdMob) | No | **Yes** | Third-party advertising |
-| Diagnostics > Crash and performance data | Yes (AdMob) | No | No | App functionality |
+| Location > Coarse location (from the IP address) | Yes (Google ads) | No | **Yes** | Third-party advertising |
+| Identifiers > Device ID | Yes (Google ads) | No | **Yes** | Third-party advertising |
+| Usage Data > Product interaction | Yes (Google ads) | No | **Yes** | Third-party advertising, analytics |
+| Usage Data > Advertising data | Yes (Google ads) | No | **Yes** | Third-party advertising |
+| Diagnostics > Crash data, Performance data, Other diagnostic data | Yes (Google ads) | No | No | App functionality, analytics |
 
-Games, saves and files are not collected. Turn on "Privacy choices" = yes (the app shows Google's consent form and a privacy-options button where the law requires it).
+Purchases are handled by Apple and give us no personal purchase data, so do not declare them. Games, saves and files are not collected.
+Privacy choices: yes (the app shows Google's consent form and a privacy-options button where the law requires it).
 
 ## 5. Premium subscription
 
