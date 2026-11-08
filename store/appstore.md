@@ -139,11 +139,15 @@ against Google's page "AdMob: data disclosure for Apple's App Privacy details", 
 | Data | Collected | Linked to the user | Used to track | Why |
 |---|---|---|---|---|
 | Contact Info > Email address | Yes, only if the user signs in | Yes | No | App functionality (the optional account) |
-| Location > Coarse location (from the IP address) | Yes (Google ads) | No | **Yes** | Third-party advertising |
-| Identifiers > Device ID | Yes (Google ads) | No | **Yes** | Third-party advertising |
-| Usage Data > Product interaction | Yes (Google ads) | No | **Yes** | Third-party advertising, analytics |
-| Usage Data > Advertising data | Yes (Google ads) | No | **Yes** | Third-party advertising |
-| Diagnostics > Crash data, Performance data, Other diagnostic data | Yes (Google ads) | No | No | App functionality, analytics |
+| Location > Coarse location (from the IP address) | Yes (Google ads) | Yes (safe choice: Google does not say) | **Yes** | Third-party advertising |
+| Identifiers > Device ID | Yes (Google ads) | Yes (safe choice) | **Yes** | Third-party advertising, analytics |
+| Usage Data > Product interaction | Yes (Google ads) | Yes (safe choice) | **Yes** | Third-party advertising, analytics |
+| Usage Data > Advertising data | Yes (Google ads) | Yes (safe choice) | **Yes** | Third-party advertising, analytics |
+| Diagnostics > Crash data | Yes (Google ads) | No | Your choice (Google says diagnostics may be used for advertising) | App functionality, analytics |
+| Diagnostics > Performance data | Yes (Google ads) | Yes (Google calls it user-associated) | Your choice | App functionality, analytics |
+| Diagnostics > Other diagnostic data | Yes (Google ads) | No | Your choice | App functionality, analytics |
+
+Declaring more than you collect is safe; declaring less is what Apple objects to. App Store Connect shows a preview of the label; it should list Contact Info, Location, Identifiers, Usage Data and Diagnostics.
 
 Purchases are handled by Apple and give us no personal purchase data, so do not declare them. Games, saves and files are not collected.
 Privacy choices: yes (the app shows Google's consent form and a privacy-options button where the law requires it).
